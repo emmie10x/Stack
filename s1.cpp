@@ -97,4 +97,9 @@ int main(){
 
     return 0;
 }
-48-13
+
+/*
+Stack can be implemented using array by maintaining a top pointer. Push increments top, pop decrements top. Overflow occurs when top == size-1 and underflow when top == -1."
+Q: Why not use dynamic resizing?
+Because this is fixed-size stack. To support dynamic resizing, we can use vector or implement dynamic array manually.
+*/
