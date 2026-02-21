@@ -29,3 +29,7 @@ int main(){
 
     return 0;
 }
+
+/*
+Stack is a linear data structure that follows LIFO principle. In C++, STL stack provides push, pop, top, size, and empty operations, all in constant time. The stack is implemented using a container (like vector or deque) and does not allow direct access to elements other than the top. It is commonly used for function call management, expression evaluation, and backtracking algorithms.
+*/
