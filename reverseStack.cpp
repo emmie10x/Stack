@@ -59,3 +59,25 @@ int main(){
     cout << "Reversed Stack: ";
     printStack(s);
 }
+
+/*
+Why printStack takes stack by value?
+void printStack(stack<int> s)
+Because stack is passed by value
+So original stack is not modified
+If passed by reference → original stack would become empty.
+
+Reverse Logic Summary
+reverseStack:
+    pop top
+    reverse remaining stack
+    insert popped element at bottom
+Time Complexity
+Let n = number of elements
+insertAtBottom → O(n)
+reverseStack → calls insertAtBottom n times
+Total Time Complexity → O(n²)
+Space Complexity → O(n) (recursion stack)
+
+"To reverse a stack without using extra data structures, we use recursion. We remove the top element, recursively reverse the remaining stack, and then insert the removed element at the bottom using another recursive function."
+*/
