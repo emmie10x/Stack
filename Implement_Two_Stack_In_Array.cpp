@@ -87,3 +87,7 @@ int main(){
 
     return 0;
 }
+
+/*
+We use a single array to implement two stacks to optimize space. One stack grows from left to right and the other grows from right to left. Overflow occurs when top1 and top2 become adjacent (top2 - top1 == 1). All operations run in O(1) time complexity. This approach efficiently utilizes the array space, allowing both stacks to grow dynamically without wasting memory.
+*/
