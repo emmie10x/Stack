@@ -1,22 +1,21 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 
 void insertAtBottom(stack<int> &s, int val){
-    // base case
+    // Base case
     if(s.empty()){
-        // insert
         s.push(val);
         return;
     }
-    // 1 case hm krenge, baki recursion krega
+
+    // Store top element
     int topElement = s.top();
     s.pop();
 
-    // recursion
+    // Recursive call
     insertAtBottom(s, val);
 
-    // backtrack
+    // Backtracking step
     s.push(topElement);
 }
 
@@ -32,9 +31,13 @@ int main(){
 
     insertAtBottom(s, val);
 
-    // traverse
-    while(!s.empty){
+    while(!s.empty()){
         cout << s.top() << " ";
         s.pop();
-    } cout << endl;
+    }
+    cout << endl;
 }
+
+/*
+Since stack does not allow direct bottom insertion, we use recursion. We pop all elements until stack becomes empty, insert the value, then push all elements back using backtracking
+*/
